@@ -120,4 +120,12 @@ class SubjectController extends Controller
     }
     
 
+    public function afterUpdate(){
+        if ($this->update()){
+            echo "hammasi ok!";
+        }else{
+            echo "after update funksiya ishlamadi";
+        }
+    }
+
 }
