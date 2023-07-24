@@ -4,3 +4,4 @@ use vendor\myframe\Application;
 
 $app = new Application();
 $app->run();
+//added by quvonchbek
