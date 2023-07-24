@@ -103,4 +103,30 @@ class StudentController extends Controller
         }
     }
 
+    public function sort()
+    {
+        $sort = new Student();
+        if (isset($_GET['IDASC'])) {
+            $students = $sort->getListsortidASC();
+        } elseif (isset($_GET['IDDESC'])) {
+            $students = $sort->getListsortidDESC();
+        } else {
+            // Default sorting
+            $students = $sort->getList();
+        }
+        if (isset($_GET['FirstnameASC'])) {
+            $students = $sort->getListsortnameASC();
+        } elseif (isset($_GET['FirstnameDESC'])) {
+            $students = $sort->getListsortnameDESC();
+        }
+        if (isset($_GET['LastnameASC'])) {
+            $students = $sort->sortlastNameASC();
+        } elseif (isset($_GET['LastnameDESC'])) {
+            $students = $sort->sortlastNameDESC();
+        }
+
+        $pageCount = $sort->getPageCount();
+        $this->render('student/sort', ['list' => $students,'pageCount'=>$pageCount]);
+    }
+
 }
