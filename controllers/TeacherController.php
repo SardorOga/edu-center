@@ -95,4 +95,10 @@ class TeacherController extends Controller
         }
     }
 
+    public function sortName()
+    {
+        return "sort";
+    }
+
+
 }
