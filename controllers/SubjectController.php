@@ -109,5 +109,15 @@ class SubjectController extends Controller
             header('Location:/subject/all');
         }
     }
+    //push
+    public function delete($id)
+    {
+        
+        $student = new Student();
+        $student->delete($id);
+        header("Location: /index.php/student/list");
+        exit();
+    }
+    
 
 }
