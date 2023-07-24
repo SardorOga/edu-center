@@ -114,7 +114,8 @@ class SubjectController extends Controller
         if ($this->update()){
             echo "hammasi ok!";
         }else{
-            echo "after update funksiya ishlamadi";
+            $res = 'ok';
+            echo "after update funksiya ishlamadi $res";
         }
     }
 
