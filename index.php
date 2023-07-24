@@ -4,3 +4,6 @@ use vendor\myframe\Application;
 
 $app = new Application();
 $app->run();
+
+
+//Added by BigDev
