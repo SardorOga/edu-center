@@ -7,6 +7,9 @@
         <div class="create_btn mt-3" style="display: flex;justify-content: flex-start">
             <a href="/teacher/create" class="btn btn-primary">Qo'shish</a>
         </div>
+        <div class="row">
+            <h1>Oqituvchilar ro'yhati</h1>
+        </div>
         <table class="table">
             <thead>
             <tr>
