@@ -110,11 +110,11 @@ class SubjectController extends Controller
         }
     }
 
-    public function afterUpdate(){
-        if ($this->update()){
-            echo "hammasi ok!";
-        }else{
-            echo "after update funksiya ishlamadi";
+    public function afterDelete($id) {
+        $model = new Subject();
+        $model->delete($id);
+        if ($model->delete($id)){
+            echo "Mufaqqiyatli o`chirildi";
         }
     }
 
