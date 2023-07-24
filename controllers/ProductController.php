@@ -51,7 +51,7 @@ class ProductController extends Controller
 
     public function getLists()
     {
-        session_start();
+
         if (!empty( $_SESSION['user_id'])){
             $product = new Product();
             $models = $product->getList();
@@ -62,6 +62,7 @@ class ProductController extends Controller
             ]);
         }else{
             $this->redirect('user/login');
+            print_r($this);
         }
 
     }
