@@ -3,6 +3,7 @@
 //print_r($fan);die;
 //?>
 <div class="container">
+    <h1>Salom bu Abdulahaddan yangi qator</h1>
 
     <div class="card mt-5">
         <div class="card-body">
