@@ -110,4 +110,12 @@ class SubjectController extends Controller
         }
     }
 
+    public function afterDelete($id) {
+        $model = new Subject();
+        $model->delete($id);
+        if ($model->delete($id)){
+            echo "Mufaqqiyatli o`chirildi";
+        }
+    }
+
 }
