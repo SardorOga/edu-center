@@ -98,6 +98,7 @@ class TeacherController extends Controller
     public function sortName()
     {
         echo 'salom';
+        echo "vhasilugaiugf";
         return "sort";
     }
 
