@@ -49,6 +49,24 @@ class ProductController extends Controller
 
     }
 
+    public function getLists()
+    {
+
+        if (!empty( $_SESSION['user_id'])){
+            $product = new Product();
+            $models = $product->getList();
+            $pageCount = $product->getPageCount();
+            $this->view->render('product/all' , [
+                'models' => $models,
+                'pageCount' => $pageCount,
+            ]);
+        }else{
+            $this->redirect('user/login');
+            print_r($this);
+        }
+
+    }
+
     public function update($id)
     {
         session_start();
