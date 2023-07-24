@@ -14,6 +14,16 @@ class Teacher extends Model
         return 'teacher'; 
     }
 
+    public function __construct()
+    {
+        $this->gitTest();
+    }
+
+    public function gitTest()
+    {
+        return "Bu test uchun o'rganish";
+    }
+
     public function create($first_name,$last_name,$gender,$email,$experience,$specialty,$phone){
         $sql = "insert into teacher(last_name,first_name,gender,email,experience,specialty,phone) 
     values ('$last_name' , '$first_name' , '$gender', '$email' , '$experience' , '$specialty' , '$phone')";
