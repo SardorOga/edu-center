@@ -8,9 +8,10 @@ use vendor\myframe\Model;
 
 class Room extends Model
 {
-    public function tableName()
+    public function getList()
     {
-        return 'rooms';
+      $sql="select * from rooms";
+      $stmt=$this->db->prepare($sql);
     }
 
 }
