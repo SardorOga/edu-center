@@ -112,7 +112,7 @@ class SubjectController extends Controller
 
     public function afterUpdate(){
         if ($this->update()){
-            echo "hammasi ok adasd!";
+            echo "hammasi okads das!";
         }else{
             $res = 'ok';
             echo "after update funksiya ishlamadi $res";
